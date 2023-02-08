@@ -1,8 +1,11 @@
-### Auteurs : SANTIAGO Leonardo, MATTTE RIO FERNANDEZ Rodrigo
+### Auteur : SANTIAGO Leonardo
+
+## L'objectif de ce project est de effectuer l'indexation (clustering) d'une base des données audio
 
 import numpy as np
 import matplotlib.pyplot as plt
 
+## Definition des descripteurs audio :
 def enveloppe_energie(amplitude : list, taille_fen : int) -> list:
     offset = 0
     e = []
@@ -33,6 +36,7 @@ def zcr(amplitude : list) -> int:
     amplitude2 = np.sign(amplitude[1 : ])
     return (1/2) * np.sum(np.abs(amplitude2 - amplitude1)) 
 
+## Pour normaliser un vecteur :
 def normalisation(x : np.ndarray) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     m = x.mean(0)
     ec = x.std(0)
@@ -79,7 +83,8 @@ def performance(classifications : np.ndarray) -> float:
     taux_reconnaissance = np.size(class_correctes) / np.size(classifications)
     return taux_reconnaissance
 
-if __name__ == "__main__":
+## Fonction principale
+if __name__ == "__main__": 
     donnees_app = np.loadtxt("donnees_app.txt")
     sa = donnees_app[1, :]
     donnees_test = np.loadtxt("donnees_test.txt")
