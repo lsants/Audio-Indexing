@@ -1,5 +1,5 @@
 # Audio Database Indexing (Clustering)
-The purpose of this project is to perform clustering (indexing) on an audio database.
+This project was conducted by me for a couse in "Multimedia: concepts et technologies" at École Centrale de Lyon. Its purpose was to perform clustering (indexing) on an music track database.
 
 ## Audio Descriptors
 The following audio descriptors have been defined in the code:
