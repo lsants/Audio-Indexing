@@ -1,4 +1,3 @@
-### Auteur : SANTIAGO Leonardo
 
 ## L'objectif de ce project est de effectuer l'indexation (clustering) d'une base des données audio
 
